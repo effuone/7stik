@@ -21,7 +21,7 @@ const PostIdPage = ()=>{
         fetchComments(params.id)
     }, [])
     return(
-        <div>
+        <div style={{marginTop: 70}}>
             <h1>You opened post page of id {params.id}</h1>
             {isLoading
             ? <Loader/>

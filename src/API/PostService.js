@@ -1,5 +1,5 @@
 import axios from "axios"
-const jsonplaceholder = 'https://jsonplaceholder.typicode.com/posts/'
+const jsonplaceholder = 'https://jsonplaceholder.cypress.io/posts/'
 const fakestoreapi = 'https://fakestoreapi.com/products/'
 export default class PostService
 {

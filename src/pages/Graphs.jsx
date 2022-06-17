@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import LineChart from "../components/LineChart";
 import MyButton from "../components/UI/button/MyButton";
 import DataPostForm from "../components/DataPostData";
 import MyModal from "../components/UI/modal/MyModal";
+import { Doughnut } from 'react-chartjs-2';
 
 const Graphs = () => {
     const [modal, setModal] = useState(false)
@@ -62,8 +63,26 @@ const Graphs = () => {
           },
         ],
       });
+    console.log(userData.datasets.data)
     const createPoint = (newPoint) =>{
-        setData([...data, newPoint])
+      const newData = {
+        'id': 7,
+        'year': parseInt(newPoint.year),
+        'userGain': parseInt(newPoint.userGain),
+        'userLost': parseInt(newPoint.userLost)
+      }
+        setData([...data, newData])
+        const userData = [...data];
+        userData.push(newData);
+        console.log(userData)
+        setUserData(state => ({
+          ...state,
+          datasets: [{
+            ...state.datasets,
+            data: userData
+          }
+          ]
+        }))
         setModal(false)
     }
     
@@ -77,7 +96,7 @@ const Graphs = () => {
     // }
 
     return (
-        <div>
+        <div style={{marginTop: 70}}>
             <div style={{ width: 700 }}>
                 <LineChart chartData={userData} />
             </div>

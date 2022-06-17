@@ -10,10 +10,10 @@ import MyButton from "../components/UI/button/MyButton";
 import "../styles/App.css"
 import PostService from "../API/PostService";
 import Loader from "../components/UI/loader/Loader";
-import { getPageCount, getPagesArray } from "../components/utils/pages";
+import { getPageCount } from "../components/utils/pages";
 import Pagination from "../components/UI/pagination/Pagination";
 
-function Posts() {
+const Posts = () => {
   const [posts, setPosts] = useState([])
   const [filter, setFilter] = useState({sort: '', query: ''})
   const [modal, setModal] = useState(false)
