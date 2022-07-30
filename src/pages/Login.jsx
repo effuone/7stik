@@ -13,7 +13,7 @@ const Login = () => {
      <div>
          <h1>Login page</h1>
          <form onSubmit={login}>
-            <MyInput type="text" placeholder="Enter login"></MyInput>
+            <MyInput type="email" placeholder="Enter email"></MyInput>
             <MyInput type="password" placeholder="Enter password"></MyInput>
             <MyButton>Enter</MyButton>
          </form>
