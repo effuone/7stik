@@ -8,8 +8,8 @@ import { Navigate } from "react-router-dom";
 
 export const privateRoutes = [
     {path: '/about', element: <About/>, exact: true},
-    {path: '/posts', element: <Posts/>, exact: true},
-    {path: '/posts/:id', element: <PostIdPage/>, exact: true},
+    {path: '/universities', element: <Posts/>, exact: true},
+    {path: '/universities/:id', element: <PostIdPage/>, exact: true},
     {path: '/graphs', element: <Graphs/>, exact: true}
 ]
 export const publicRoutes = [

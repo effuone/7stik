@@ -59,7 +59,7 @@ const Posts = () => {
       {postError && <h1>Произошла ошибка ${postError}</h1>}
       {isPostsLoading === true
       ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}><Loader/></div>
-      : <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Список товаров"/>
+      : <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Список университетов"/>
       }
       <Pagination 
         page={page}
